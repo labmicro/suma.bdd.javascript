@@ -12,6 +12,10 @@ Then('no hay ningun truncamiento', function () {
     expect(contexto.resultado.error).to.be.equal(0);
 });
 
+Then('hay un truncamiento de numero positivo', function () {
+    expect(contexto.resultado.error).to.be.equal(1);
+});
+
 Then('el resultado de la suma es {int}', function (acumulado) {
     expect(contexto.resultado.acumulador).to.be.equal(acumulado);
 });

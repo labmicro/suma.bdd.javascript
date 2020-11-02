@@ -10,3 +10,8 @@ Escenario: Suma normal sin saturacion
     Cuando efectuo una suma con saturacion de los valores 3 y 5
     Entonces no hay ningun truncamiento
     Y el resultado de la suma es 8
+
+Escenario: Suma con saturacion por positivo
+    Cuando efectuo una suma con saturacion de los valores 32765 y 3
+    Entonces hay un truncamiento de numero positivo
+    Y el resultado de la suma es 32767

@@ -15,3 +15,8 @@ Escenario: Suma con saturacion por positivo
     Cuando efectuo una suma con saturacion de los valores 32765 y 3
     Entonces hay un truncamiento de numero positivo
     Y el resultado de la suma es 32767
+
+Escenario: Suma con saturacion por negativo
+    Cuando efectuo una suma con saturacion de los valores -32766 y -3
+    Entonces hay un truncamiento de numero negativo
+    Y el resultado de la suma es -32768

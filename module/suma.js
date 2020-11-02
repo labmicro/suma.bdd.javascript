@@ -1,4 +1,5 @@
 exports.acumular = (acumulador, operando) => {
-    return {acumulador: acumulador + operando, error: 0};
+    var suma = acumulador + operando;
+    return {acumulador: suma, error: 0};
 }
 

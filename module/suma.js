@@ -1,5 +1,10 @@
 exports.acumular = (acumulador, operando) => {
     var suma = acumulador + operando;
-    return {acumulador: suma, error: 0};
+
+    if (suma > 0x7FFF) {
+        return {acumulador: positivo, error: 1};
+    } else {
+        return {acumulador: suma, error: 0};
+    }
 }
 

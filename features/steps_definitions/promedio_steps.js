@@ -4,8 +4,8 @@ const promedio = require("../../module/promedio.js");
 
 let contexto = {};
 
-When('calculo el promedio del vector {}', function (vector) {
-    vector = JSON.parse(vector);
+When('calculo el promedio del vector', function (vector) {
+    vector = vector.rawTable.flat().map(x => parseInt(x));
     contexto.resultado = promedio.promediar(vector);
 });
 

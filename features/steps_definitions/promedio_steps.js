@@ -13,6 +13,10 @@ Then('el promedio es valido', function () {
     expect(contexto.resultado.error).to.be.false;
 });
 
+Then('el promedio no es valido', function () {
+    expect(contexto.resultado.error).to.be.true;
+});
+
 Then('el resultado del promedio es {int}', function (acumulado) {
     expect(contexto.resultado.promedio).to.be.equal(acumulado);
 });

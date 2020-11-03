@@ -6,17 +6,12 @@ Característica: Disponer de una funcion de suma con saturacion
     Quiero disponer de una libreria sencilla y confiable
     Para poder procesar señales digitales facilmente
 
-Escenario: Suma normal sin saturacion
-    Cuando efectuo una suma con saturacion de los valores 3 y 5
-    Entonces no hay ningun truncamiento
-    Y el resultado de la suma es 8
-
-Escenario: Suma con saturacion por positivo
-    Cuando efectuo una suma con saturacion de los valores 32765 y 3
-    Entonces hay un truncamiento de numero positivo
-    Y el resultado de la suma es 32767
-
-Escenario: Suma con saturacion por negativo
-    Cuando efectuo una suma con saturacion de los valores -32766 y -3
-    Entonces hay un truncamiento de numero negativo
-    Y el resultado de la suma es -32768
+Esquema del escenario: Sumas con y sin saturacion
+    Cuando efectuo una suma con saturacion de los valores <a> y <b>
+    Entonces el resultado de la suma es <resultado>
+    Y la funcion suma devuelve el codigo de error <error>
+    Ejemplos:
+    |    a   |  b | resultado | error |
+    |    3   |  5 |     8     |   0   |
+    |  32765 |  3 |   32767   |   1   |
+    | -32766 | -3 |  -32768   |  -1   |

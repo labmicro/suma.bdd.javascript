@@ -8,16 +8,8 @@ When('efectuo una suma con saturacion de los valores {int} y {int}', function (a
     contexto.resultado = suma.acumular(acumulador, operando);
 });
 
-Then('no hay ningun truncamiento', function () {
-    expect(contexto.resultado.error).to.be.equal(0);
-});
-
-Then('hay un truncamiento de numero positivo', function () {
-    expect(contexto.resultado.error).to.be.equal(1);
-});
-
-Then('hay un truncamiento de numero negativo', function () {
-    expect(contexto.resultado.error).to.be.equal(-1);
+Then('la funcion suma devuelve el codigo de error {int}', function (error) {
+    expect(contexto.resultado.error).to.be.equal(error);
 });
 
 Then('el resultado de la suma es {int}', function (acumulado) {
